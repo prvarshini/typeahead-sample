@@ -1,0 +1,36 @@
+<html>
+	<head>
+		<title>Typeahead</title>
+		<link rel="stylesheet" href="jquery.typeahead.css">
+		<script src="http://code.jquery.com/jquery-2.1.0.js"></script>
+		<script src="jquery.typeahead.min.js"></script>
+	</head>
+	<body>
+		<form id="" name="" action="">
+			<div class="typeahead-container">
+				<div class="typeahead-field">
+					<span class="typeahead-query">
+						<input id="typeahead" name="typeahead" type="search" placeholder="Search for programming languages" autocomplete="off">
+                    </span>
+                    <span class="typeahead-button">
+						<button type="submit">
+							<i class="search-icon"></i>
+						</button>
+					</span>
+				</div>
+			</div>
+		</form>
+	<script>
+        $('#typeahead').typeahead({
+            minLength: 1,
+            order: "asc",
+            hint: true,
+            backdrop: true,            
+            source: "search.json",
+            debug: true
+        });
+    </script>
+</div>
+
+</body>
+</html>
